@@ -18,6 +18,9 @@ docker run -d \
 --name $CONTAINER_JENKINS my_jenkins
 
 CONTAINER_TOMCAT=webserver
+docker stop $CONTAINER_TOMCAT
+docker rm $CONTAINER_TOMCAT
+
 docker container run -d --name $CONTAINER_TOMCAT \
  -p 80:8080 \
  -v $WAR_PATH:/usr/local/tomcat/webapps \
@@ -25,6 +28,9 @@ docker container run -d --name $CONTAINER_TOMCAT \
  tomcat:8.0.42-jre8-alpine
 
 CONTAINER_MYSQL=dbserver
+docker stop $CONTAINER_MYSQL
+docker rm $CONTAINER_MYSQL
+
 docker run  -d --name dbserver \
  -e MYSQL_ROOT_PASSWORD=123456 \
  -e MYSQL_USER=dev \
