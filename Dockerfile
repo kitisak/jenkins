@@ -1,7 +1,7 @@
 FROM openjdk:8u121-jdk
 MAINTAINER SCK Team somkiat@scrum123.com
 RUN apt-get update -qq
-RUN apt-get install -qqy ca-certificates curl git-core
+RUN apt-get install -qqy ca-certificates curl git-core maven
 
 RUN mkdir -p /opt/jenkins/data/plugins
 RUN curl -sf -o /opt/jenkins/jenkins.war -L http://mirrors.jenkins.io/war-stable/1.651.3/jenkins.war
