@@ -1,6 +1,6 @@
 FROM debian:jessie
 MAINTAINER SCK Team somkiat@scrum123.com
-RUN deb http://http.debian.net/debian jessie-backports main
+RUN echo "deb http://http.debian.net/debian jessie-backports main" >> /etc/apt/sources.list
 RUN apt-get update -qq
 RUN apt-get install -qqy ca-certificates openjdk-8-jdk curl git-core
 
