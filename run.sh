@@ -1,4 +1,4 @@
-WAR_PATH=/Users/somkiat/data/training/give-and-take/war
+WAR_PATH=/root/www
 mkdir -p $WAR_PATH
 #docker image rm -f my_jenkins
 docker build -t my_jenkins .
