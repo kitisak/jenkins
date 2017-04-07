@@ -1,4 +1,4 @@
-FROM openjdk:8u121-jdk-alpine
+FROM openjdk:8u121-jdk
 MAINTAINER SCK Team somkiat@scrum123.com
 RUN apt-get update -qq
 RUN apt-get install -qqy ca-certificates curl git-core
