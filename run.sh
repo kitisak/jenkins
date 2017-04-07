@@ -1,5 +1,7 @@
 docker build -t test1 .
 
+docker rm -f test
+
 docker run -d \
 -e DOCKERHUB_ID=somkiat \
 -e DOCKERHUB_EMAIL=somkiat.p@gmail.com \
