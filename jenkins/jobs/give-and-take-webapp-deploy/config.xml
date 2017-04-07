@@ -15,7 +15,7 @@
   <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
   <triggers/>
   <concurrentBuild>false</concurrentBuild>
-  <customWorkspace>@@JENKINS_HOME@@/jobs/give-and-take-webapp-build/workspace/target</customWorkspace>
+  <customWorkspace>${JENKINS_HOME}/jobs/give-and-take-webapp-build/workspace/target</customWorkspace>
   <builders>
     <hudson.tasks.Shell>
       <command></command>
