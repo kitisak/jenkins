@@ -8,9 +8,6 @@ docker stop $CONTAINER_JENKINS
 docker rm $CONTAINER_JENKINS
 
 docker run -d \
--e DOCKERHUB_ID=somkiat \
--e DOCKERHUB_EMAIL=somkiat.p@gmail.com \
--e GITHUB_ID=up1 \
 -p 8080:8080 \
 --restart always \
 -v /var/run/docker.sock:/var/run/docker.sock \
