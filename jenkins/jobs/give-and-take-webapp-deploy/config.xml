@@ -5,17 +5,8 @@
   <keepDependencies>false</keepDependencies>
   <properties>
     <com.coravy.hudson.plugins.github.GithubProjectProperty plugin="github@1.8">
-      <projectUrl>https://github.com/@@GHUSER@@/webapp/</projectUrl>
+      <projectUrl>https://github.com/up1/give-and-take</projectUrl>
     </com.coravy.hudson.plugins.github.GithubProjectProperty>
-    <com.tikal.hudson.plugins.notification.HudsonNotificationProperty plugin="notification@1.5">
-      <endpoints>
-        <com.tikal.hudson.plugins.notification.Endpoint>
-          <protocol>HTTP</protocol>
-          <format>JSON</format>
-          <url></url>
-        </com.tikal.hudson.plugins.notification.Endpoint>
-      </endpoints>
-    </com.tikal.hudson.plugins.notification.HudsonNotificationProperty>
   </properties>
   <scm class="hudson.scm.NullSCM"/>
   <canRoam>true</canRoam>
@@ -24,12 +15,10 @@
   <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
   <triggers/>
   <concurrentBuild>false</concurrentBuild>
+  <customWorkspace>@@JENKINS_HOME@@/jobs/give-and-take-webapp-build/workspace/target</customWorkspace>
   <builders>
     <hudson.tasks.Shell>
-        <command>
-            docker pull @@DHUSER@@/webapp:latest
-            docker run --rm -it @@DHUSER@@/webapp /usr/bin/python /opt/webapp/tests.py
-        </command>
+      <command></command>
     </hudson.tasks.Shell>
   </builders>
   <publishers/>

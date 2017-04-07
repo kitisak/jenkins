@@ -5,7 +5,7 @@
   <keepDependencies>false</keepDependencies>
   <properties>
     <com.coravy.hudson.plugins.github.GithubProjectProperty plugin="github@1.8">
-      <projectUrl>https://github.com/docker-training/webapp/</projectUrl>
+      <projectUrl>https://github.com/up1/give-and-take</projectUrl>
     </com.coravy.hudson.plugins.github.GithubProjectProperty>
   </properties>
   <scm class="hudson.plugins.git.GitSCM" plugin="git@2.2.1">
@@ -42,7 +42,7 @@
   </builders>
   <publishers>
     <hudson.tasks.BuildTrigger>
-      <childProjects>training-webapp-test</childProjects>
+      <childProjects>give-and-take-webapp-deploy</childProjects>
       <threshold>
         <name>SUCCESS</name>
         <ordinal>0</ordinal>
