@@ -10,6 +10,7 @@ docker rm $CONTAINER_JENKINS
 docker run -d \
 -p 8080:8080 \
 --restart always \
+-e GITHUB_ID=up1 \
 -v /var/run/docker.sock:/var/run/docker.sock \
 -v $WAR_PATH:/opt/jenkins/data/www \
 --name $CONTAINER_JENKINS my_jenkins
