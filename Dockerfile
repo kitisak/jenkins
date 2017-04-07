@@ -1,6 +1,5 @@
 FROM openjdk:8u121-jdk-alpine
 MAINTAINER SCK Team somkiat@scrum123.com
-RUN echo "deb http://http.debian.net/debian jessie-backports main" >> /etc/apt/sources.list
 RUN apt-get update -qq
 RUN apt-get install -qqy ca-certificates curl git-core
 
