@@ -23,6 +23,8 @@ RUN curl -sf -o /opt/jenkins/data/plugins/docker-commons.hpi -L http://mirrors.j
 RUN curl -sf -o /opt/jenkins/data/plugins/docker-build-publish.hpi -L http://mirrors.jenkins-ci.org/plugins/docker-build-publish/latest/docker-build-publish.hpi
 RUN curl -sf -o /opt/jenkins/data/plugins/token-macro.hpi -L http://mirrors.jenkins-ci.org/plugins/token-macro/latest/token-macro.hpi
 
+RUN curl -sf -o /opt/jenkins/data/plugins/junit.hpi -L http://mirrors.jenkins-ci.org/plugins/junit/latest/junit.hpi
+
 ADD jenkins/com.cloudbees.dockerpublish.DockerBuilder.xml /opt/jenkins/data/com.cloudbees.dockerpublish.DockerBuilder.xml
 ADD jenkins/com.cloudbees.jenkins.GitHubPushTrigger.xml /opt/jenkins/data/com.cloudbees.jenkins.GitHubPushTrigger.xml
 
