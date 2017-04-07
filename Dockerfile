@@ -36,11 +36,9 @@ RUN curl -sf -o /opt/jenkins/data/plugins/build-monitor-plugin.hpi -L http://mir
 
 
 ADD jenkins/jobs/ /opt/jenkins/data/jobs/
-
-RUN curl -fsSLO https://get.docker.com/builds/Linux/x86_64/docker-17.04.0-ce.tgz && tar --strip-components=1 -xvzf docker-17.04.0-ce.tgz -C /usr/local/bin
 ADD runjenkins.sh /usr/local/bin/runjenkins
 
-RUN chmod 0755 /usr/local/bin/docker /usr/local/bin/runjenkins
+RUN chmod 0755 /usr/local/bin/runjenkins
 RUN mkdir -p /opt/jenkins/data/www
 
 ENV JENKINS_HOME /opt/jenkins/data
