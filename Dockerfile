@@ -21,8 +21,6 @@ RUN curl -sf -o /opt/jenkins/data/plugins/git.hpi -L http://mirrors.jenkins-ci.o
 
 RUN curl -sf -o /opt/jenkins/data/plugins/icon-shim.hpi -L http://mirrors.jenkins-ci.org/plugins/icon-shim/latest/icon-shim.hpi
 RUN curl -sf -o /opt/jenkins/data/plugins/authentication-tokens.hpi -L http://mirrors.jenkins-ci.org/plugins/authentication-tokens/latest/authentication-tokens.hpi
-RUN curl -sf -o /opt/jenkins/data/plugins/docker-commons.hpi -L http://mirrors.jenkins-ci.org/plugins/docker-commons/latest/docker-commons.hpi
-RUN curl -sf -o /opt/jenkins/data/plugins/docker-build-publish.hpi -L http://mirrors.jenkins-ci.org/plugins/docker-build-publish/latest/docker-build-publish.hpi
 RUN curl -sf -o /opt/jenkins/data/plugins/token-macro.hpi -L http://mirrors.jenkins-ci.org/plugins/token-macro/latest/token-macro.hpi
 
 RUN curl -sf -o /opt/jenkins/data/plugins/junit.hpi -L http://mirrors.jenkins-ci.org/plugins/junit/latest/junit.hpi
