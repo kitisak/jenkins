@@ -34,7 +34,7 @@ RUN curl -sf -o /opt/jenkins/data/plugins/groovy-postbuild.hpi -L http://mirrors
 RUN curl -sf -o /opt/jenkins/data/plugins/build-failure-analyzer.hpi -L http://mirrors.jenkins-ci.org/plugins/build-failure-analyzer/latest/build-failure-analyzer.hpi
 RUN curl -sf -o /opt/jenkins/data/plugins/build-monitor-plugin.hpi -L http://mirrors.jenkins-ci.org/plugins/build-monitor-plugin/latest/build-monitor-plugin.hpi
 
-
+ADD jenkins/config.xml /opt/jenkins/data/config.xml
 ADD jenkins/jobs/ /opt/jenkins/data/jobs/
 ADD runjenkins.sh /usr/local/bin/runjenkins
 
