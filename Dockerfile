@@ -1,5 +1,6 @@
 FROM debian:jessie
 MAINTAINER SCK Team somkiat@scrum123.com
+RUN add-apt-repository ppa:webupd8team/java -y
 RUN apt-get update -qq
 RUN apt-get install -qqy ca-certificates openjdk-8-jdk curl git-core
 
