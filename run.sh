@@ -23,7 +23,6 @@ docker run  -d --name dbserver \
  -e MYSQL_USER=dev \
  -e MYSQL_PASSWORD=123456 \
  -e MYSQL_DATABASE=ewallet \
- --restart always \
  mysql:5.7.17
 
 CONTAINER_TOMCAT=webserver
@@ -32,7 +31,6 @@ docker rm $CONTAINER_TOMCAT
 
 docker container run -d --name $CONTAINER_TOMCAT \
  -p 80:8080 \
- -v $WAR_PATH:/usr/local/tomcat/webapps \
- --restart always \
+ -v /root/www:/usr/local/tomcat/webapps \
  --link dbserver \
  tomcat:8.0.42-jre8-alpine
