@@ -18,7 +18,7 @@
   <customWorkspace>${JENKINS_HOME}/jobs/give-and-take-webapp-build/workspace/target</customWorkspace>
   <builders>
     <hudson.tasks.Shell>
-      <command></command>
+      <command>cp ewallet.war /opt/jenkins/data/www</command>
     </hudson.tasks.Shell>
   </builders>
   <publishers/>
